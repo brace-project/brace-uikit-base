@@ -4,6 +4,7 @@
 namespace Brace\UiKit\Base\Template;
 
 
+use Brace\UiKit\Base\UiBaseConfig;
 use Brace\UiKit\CoreUi\CoreUiConfig;
 
 class Renderer
@@ -27,7 +28,7 @@ class Renderer
     }
 
 
-    public function render(CoreUiConfig $__CONFIG, string $__CONTENT) : string
+    public function render(UiBaseConfig $__CONFIG, string $__CONTENT) : string
     {
         ob_start();
         require $this->tplFileName;
