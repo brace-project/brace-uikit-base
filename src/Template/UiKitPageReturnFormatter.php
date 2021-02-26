@@ -11,15 +11,10 @@ use Psr\Http\Message\ResponseInterface;
 class UiKitPageReturnFormatter implements ReturnFormatterInterface
 {
 
-    /**
-     * @var BraceApp
-     */
-    private $app;
-
-    public function __construct (BraceApp $app)
-    {
-        $this->app = $app;
-    }
+    public function __construct (
+        private BraceApp $app,
+        private string $diConfigName
+    ){}
 
     public function canHandle($input): bool
     {
@@ -35,7 +30,7 @@ class UiKitPageReturnFormatter implements ReturnFormatterInterface
 
         $tplData = $input->_getData();
         $renderer = new Renderer($tplData["tpl"]);
-        $html = $renderer->render($this->app->resolve("coreUiConfig"), $tplData["content"]);
+        $html = $renderer->render($this->app->resolve($this->diConfigName), $tplData["content"]);
 
         return $this->app->responseFactory->createResponseWithBody($html)->withHeader("Content-Type", "text/html");
     }
