@@ -20,7 +20,7 @@
     },
     "require-dev": {
         "phore/tester": "*",
-        "erusev/parsedown-extra": "*"
+        "erusev/parsedown-extra": "^0.8"
     },
     "autoload": {
         "psr-4": {
