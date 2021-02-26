@@ -15,7 +15,9 @@
         "brace/core": "*",
         "phore/html": "*"
     },
-
+    "suggest": {
+        "erusev/parsedown-extra": "Parse Markdown files"
+    },
     "require-dev": {
         "phore/tester": "*",
         "erusev/parsedown-extra": "*"
