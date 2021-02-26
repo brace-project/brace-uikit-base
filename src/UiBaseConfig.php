@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Brace\UiKit\BAse;
+namespace Brace\UiKit\Base;
 
 
 class UiBaseConfig
