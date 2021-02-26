@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "brace/core": "*"
+        "brace/core": "*",
+        "phore/html": "*"
     },
 
     "require-dev": {
